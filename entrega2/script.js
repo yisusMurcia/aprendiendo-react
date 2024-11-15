@@ -1,4 +1,5 @@
 const selectOptionEl = document.getElementById("author");
+const quoteDiv = document.getElementById("quote-div");
 
 const saveQuotes= async()=>{
     try{await fetch('https://dummyjson.com/quotes')
@@ -16,7 +17,7 @@ const saveQuotes= async()=>{
 }
 
 const getQuotes = ()=>{
-    let quotesStorage = localStorage.getItem("quotes");
+    let quotesStorage = sessionStorage.getItem("quotes");
     if (!quotesStorage){
         saveQuotes();
         setTimeout(quotesStorage = sessionStorage.getItem("quotes"), 2000)
@@ -33,4 +34,24 @@ const setAuthors = (quotesStorage)=>{
     }
 }
 
+const getQuote = (id, quotes)=>{
+    let quoteFound = false;
+    for(let quote of quotes){
+        if(quote.id == id){
+            quoteFound = true;
+            quoteDiv.innerHTML= `<hr>
+            <p class ="quote">Frase : ${quote.quote} <br> Autor: ${quote.author}<p>`;
+        }
+    }
+
+    if(!quoteFound){
+        quoteDiv.innerText = "Algo salio mal";
+    }
+}
+
 setAuthors(getQuotes());
+
+selectOptionEl.addEventListener("change", ()=>{
+    const selectedId = selectOptionEl.value;
+    getQuote(selectedId, getQuotes());
+})

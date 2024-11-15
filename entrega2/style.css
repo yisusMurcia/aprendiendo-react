@@ -5,7 +5,9 @@
 }
 
 html{
-    background-color: #111111;
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: "Indie Flower";
     color: #f1f1f1;
 }
@@ -13,14 +15,13 @@ html{
 h1{
     font-family: "Gravitas One";
     text-align: center;
-    color: #286cbb;
+    color: #dd6503;
 }
 
 hr{
-    border-color: #5293de;
+    border-color: #ffda45;
     box-shadow: 0 0.2rem 0.7rem;
     margin: 0.7rem 0.2rem;
-    color: #5293de;
 }
 
 main{
@@ -28,18 +29,20 @@ main{
 }
 
 section{
-    background-color: #112240cc;
+    background-color: #481a00cc;
     padding: 0.3rem;
     border-radius: 0.4rem;
 }
 
 select{
-    background-color: #18498c;
+    background-color: #e37d0096;
     border-radius: 0.2rem;
-    border: solid 0.2px #8eb8eb;
+    font-family: "Indie Flower";
 }
 
-select:focus{
-    border-color: #007BFF; /* Cambiar el color del borde al tener foco */
-    
+.quote{
+    background-color: #481a00;
+    border: solid 0.15rem #ffa500;
+    padding: 0.1rem;
+    border-radius: 0.2rem;
 }
