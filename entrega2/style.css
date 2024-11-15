@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background-color: #111111;
+    font-family: "Indie Flower";
+    color: #f1f1f1;
+}
+
+h1{
+    font-family: "Gravitas One";
+    text-align: center;
+    color: #286cbb;
+}
+
+hr{
+    border-color: #5293de;
+    box-shadow: 0 0.2rem 0.7rem;
+    margin: 0.7rem 0.2rem;
+    color: #5293de;
+}
+
+main{
+    margin: 0.2rem;
+}
+
+section{
+    background-color: #112240cc;
+    padding: 0.3rem;
+    border-radius: 0.4rem;
+}
+
+select{
+    background-color: #18498c;
+    border-radius: 0.2rem;
+    border: solid 0.2px #8eb8eb;
+}
+
+select:focus{
+    border-color: #007BFF; /* Cambiar el color del borde al tener foco */
+    
+}
