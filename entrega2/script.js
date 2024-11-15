@@ -26,10 +26,19 @@ const getQuotes = ()=>{
 }
 
 const setAuthors = (quotesStorage)=>{
+    const authors = []
     for(obj of quotesStorage){
         const authorOption = document.createElement("option");
         authorOption.value = obj.id;
-        authorOption.textContent = obj.author;
+        const author = obj.author;
+        if(authors.includes(author)){
+            let times = authors.filter(name=> name == author);
+            authorOption.textContent = author + ` ${times.length}`;
+        }else{
+            authorOption.textContent = author;
+        }
+        authors.push(author)
+
         selectOptionEl.appendChild(authorOption);
     }
 }
@@ -51,7 +60,7 @@ const getQuote = (id, quotes)=>{
 
 setAuthors(getQuotes());
 
-selectOptionEl.addEventListener("change", ()=>{
+selectOptionEl.addEventListener("click", ()=>{
     const selectedId = selectOptionEl.value;
     getQuote(selectedId, getQuotes());
 })
