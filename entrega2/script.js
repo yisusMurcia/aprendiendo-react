@@ -49,7 +49,10 @@ const getQuote = (id, quotes)=>{
         if(quote.id == id){
             quoteFound = true;
             quoteDiv.innerHTML= `<hr>
-            <p class ="quote">Frase : ${quote.quote} <br> Autor: ${quote.author}<p>`;
+            <p class ="quote">
+            <i class="fa-solid fa-quote-left"></i>
+            ${quote.quote} <br>
+            <i class="fa-solid fa-user"></i>${quote.author}<p>`;
         }
     }
 

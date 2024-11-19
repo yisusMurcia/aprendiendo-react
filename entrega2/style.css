@@ -44,5 +44,12 @@ select{
     background-color: #481a00;
     border: solid 0.15rem #ffa500;
     padding: 0.1rem;
-    border-radius: 0.2rem;
+    border-radius: 0.4rem;
+}
+
+.fa-solid{
+    padding: 0.4rem;
+    margin: 0.2rem;
+    border-radius: 0.4rem;
+    background-color: #dd6503cc;
 }
