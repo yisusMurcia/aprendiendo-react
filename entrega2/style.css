@@ -29,15 +29,28 @@ main{
 }
 
 section{
+    display: flex;
+    flex-direction: column;
     background-color: #481a00cc;
-    padding: 0.3rem;
+    padding: 0.4rem;
     border-radius: 0.4rem;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 select{
     background-color: #e37d0096;
     border-radius: 0.2rem;
     font-family: "Indie Flower";
+    color: #f1f1f1;
+}
+
+option{
+    color: #1f1f1f;
+}
+
+option:hover{
+    background-color: #e37d00 !important;
 }
 
 .quote{

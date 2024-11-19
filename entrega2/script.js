@@ -20,7 +20,7 @@ const getQuotes = ()=>{
     let quotesStorage = sessionStorage.getItem("quotes");
     if (!quotesStorage){
         saveQuotes();
-        setTimeout(quotesStorage = sessionStorage.getItem("quotes"), 2000)
+        setTimeout(quotesStorage = sessionStorage.getItem("quotes"), 5000)
     }
     return JSON.parse(quotesStorage);
 }
